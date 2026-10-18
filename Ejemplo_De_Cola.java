@@ -1,5 +1,6 @@
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ArrayList;
 
 public class Ejemplo_De_Cola {
@@ -20,11 +21,11 @@ public class Ejemplo_De_Cola {
 
         System.out.println("Clientes pendientes: " + clientes.size());
 
-        System.out.println("¿Está vacía? " + clientes.isEmpty());
+        System.out.println("Esta vacia? " + clientes.isEmpty());
 
-        System.out.println("¿Está Pedro? " + clientes.contains("Pedro"));
+        System.out.println("Esta Pedro? " + clientes.contains("Pedro"));
 
-        ArrayList<String> registro = new ArrayList<>();
+        List<String> registro = new ArrayList<>();
 
         registro.add("Carlos");
         registro.add("Maria");
@@ -32,15 +33,17 @@ public class Ejemplo_De_Cola {
 
         System.out.println("Registro: " + registro);
 
-        System.out.println("Cliente en posición 0: " + registro.get(0));
+        System.out.println("Cliente en posicion 0: " + registro.get(0));
 
         registro.set(1, "Mariana");
+
         System.out.println("Registro modificado: " + registro);
 
-        System.out.println("Posición de Pedro: " + registro.indexOf("Pedro"));
+        System.out.println("Posicion de Pedro: " + registro.indexOf("Pedro"));
 
         registro.remove("Carlos");
-        System.out.println("Registro después de eliminar: " + registro);
+
+        System.out.println("Registro actualizado: " + registro);
 
         while (!clientes.isEmpty()) {
             System.out.println("Atendido: " + clientes.poll());
@@ -49,6 +52,7 @@ public class Ejemplo_De_Cola {
         System.out.println("Cola final: " + clientes);
 
         registro.clear();
+
         System.out.println("Registro final: " + registro);
     }
 }
