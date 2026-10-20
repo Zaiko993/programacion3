@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -181,6 +182,17 @@ public class Licores_Lucy {
 
                         System.out.println("Total de unidades: " + compra.size());
                         System.out.println("Factura generada.");
+                    }
+                    break;
+
+                case 8:
+                    List<String> ordenados = new ArrayList<>(productos);
+                    Collections.sort(ordenados);
+
+                    System.out.println("\nCatalogo ordenado alfabeticamente:");
+
+                    for (int i = 0; i < ordenados.size(); i++) {
+                        System.out.println(ordenados.get(i));
                     }
                     break;
 
