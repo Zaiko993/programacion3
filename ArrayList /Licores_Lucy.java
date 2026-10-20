@@ -204,6 +204,26 @@ public class Licores_Lucy {
                             + compra.equals(copia));
                     break;
 
+                case 10:
+                    System.out.print("Nombre del producto que desea insertar: ");
+                    String insertar = sc.nextLine();
+
+                    if (productos.contains(insertar)) {
+                        System.out.print("Posicion donde desea insertarlo: ");
+                        int lugar = sc.nextInt();
+                        sc.nextLine();
+
+                        if (lugar >= 1 && lugar <= compra.size() + 1) {
+                            compra.add(lugar - 1, insertar);
+                            System.out.println("Producto insertado.");
+                        } else {
+                            System.out.println("Posicion invalida.");
+                        }
+                    } else {
+                        System.out.println("Producto no disponible.");
+                    }
+                    break;
+
             }
 
         } while (opcion != 9);
