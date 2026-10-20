@@ -224,8 +224,14 @@ public class Licores_Lucy {
                     }
                     break;
 
+                case 11:
+                    System.out.println("Gracias por visitar Licores Lucy.");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida.");
+                    break;
             }
 
-        } while (opcion != 9);
-    }
-}
+        } while (opcion != 12);
+}}
