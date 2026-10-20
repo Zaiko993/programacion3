@@ -124,6 +124,11 @@ public class Licores_Lucy {
                         System.out.println("No hay productos que eliminar.");
                     }
                     break;
+
+                    case 5:
+                    compra.clear();
+                    System.out.println("Compra cancelada.");
+                    break;
             }
 
         } while (opcion != 9);
