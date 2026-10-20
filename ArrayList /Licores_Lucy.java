@@ -125,9 +125,48 @@ public class Licores_Lucy {
                     }
                     break;
 
-                    case 5:
+                case 5:
                     compra.clear();
                     System.out.println("Compra cancelada.");
+                    break;
+
+                case 6:
+                    if (!compra.isEmpty()) {
+                        for (int i = 0; i < compra.size(); i++) {
+                            System.out.println((i + 1) + ". " + compra.get(i));
+                        }
+
+                        System.out.print("Posicion que desea cambiar: ");
+                        int posicion = sc.nextInt();
+                        sc.nextLine();
+
+                        if (posicion > 0 && posicion <= compra.size()) {
+                            System.out.print("Nombre del nuevo producto: ");
+                            String nuevo = sc.nextLine();
+                            int encontrado = -1;
+
+                            for (int i = 0; i < productos.size(); i++) {
+                                if (productos.get(i).equalsIgnoreCase(nuevo)) {
+                                    encontrado = i;
+                                    break;
+                                }
+                            }
+
+                            if (encontrado != -1) {
+                                String anterior = compra.set(posicion - 1,
+                                        productos.get(encontrado));
+
+                                System.out.println("Se cambio " + anterior
+                                        + " por " + productos.get(encontrado));
+                            } else {
+                                System.out.println("Producto no disponible.");
+                            }
+                        } else {
+                            System.out.println("Posicion invalida.");
+                        }
+                    } else {
+                        System.out.println("La compra esta vacia.");
+                    }
                     break;
             }
 
