@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Licores_Lucy{
+public class Licores_Lucy {
 
     public static void main(String[] args){
     
@@ -37,6 +37,32 @@ public class Licores_Lucy{
             opcion = sc.nextInt();
             sc.nextLine();
 
-            switch (opcion)
+            switch (opcion){
+    
+                case 1:
+                    System.out.println("\nProductos disponibles:");
+
+                    for (int i = 0; i < productos.size(); i++){
+                        System.out.println((i + 1) + ". " + productos.get(i));
+                    }
+
+                    System.out.print("Nombre del producto: ");
+                    String nombre = sc.nextLine();
+                    int indice = -1;
+
+                    for (int i = 0; i < productos.size(); i++){
+                        if (productos.get(i).equalsIgnoreCase(nombre))
+                            indice = i;
+                            break;}
+
+                    if (indice != -1){
+                        compra.add(productos.get(indice));
+                        System.out.println("Producto agregado.");}
+                    else{
+                        System.out.println("Producto no disponible.");}
+                    break;
+            }
+            
+        } while (opcion != 9);
     }
 }
