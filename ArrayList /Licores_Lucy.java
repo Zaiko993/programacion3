@@ -168,6 +168,22 @@ public class Licores_Lucy {
                         System.out.println("La compra esta vacia.");
                     }
                     break;
+
+                case 7:
+                    System.out.println("\n======= FACTURA LICORES LUCY =======");
+
+                    if (compra.isEmpty()) {
+                        System.out.println("No hay productos para facturar.");
+                    } else {
+                        for (int i = 0; i < compra.size(); i++) {
+                            System.out.println((i + 1) + ". " + compra.get(i));
+                        }
+
+                        System.out.println("Total de unidades: " + compra.size());
+                        System.out.println("Factura generada.");
+                    }
+                    break;
+
             }
 
         } while (opcion != 9);
