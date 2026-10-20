@@ -196,6 +196,14 @@ public class Licores_Lucy {
                     }
                     break;
 
+                case 9:
+                    List<String> copia = new ArrayList<>(compra);
+
+                    System.out.println("Copia de la compra: " + copia);
+                    System.out.println("La compra es igual a la copia? "
+                            + compra.equals(copia));
+                    break;
+
             }
 
         } while (opcion != 9);
