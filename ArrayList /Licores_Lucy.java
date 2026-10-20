@@ -103,6 +103,27 @@ public class Licores_Lucy {
                         System.out.println("Producto no encontrado.");
                     }
                     break;
+
+                case 4:
+                    if (!compra.isEmpty()) {
+                        for (int i = 0; i < compra.size(); i++) {
+                            System.out.println((i + 1) + ". " + compra.get(i));
+                        }
+
+                        System.out.print("Numero del producto que eliminara: ");
+                        int posicion = sc.nextInt();
+                        sc.nextLine();
+
+                        if (posicion > 0 && posicion <= compra.size()) {
+                            System.out.println("Eliminado: "
+                                    + compra.remove(posicion - 1));
+                        } else {
+                            System.out.println("Posicion invalida.");
+                        }
+                    } else {
+                        System.out.println("No hay productos que eliminar.");
+                    }
+                    break;
             }
 
         } while (opcion != 9);
