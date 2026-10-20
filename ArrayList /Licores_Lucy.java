@@ -77,6 +77,32 @@ public class Licores_Lucy {
                     }
                     break;
 
+                case 3:
+                    System.out.print("Producto que desea buscar: ");
+                    String buscar = sc.nextLine();
+
+                    int primera = -1;
+                    int ultima = -1;
+
+                    for (int i = 0; i < compra.size(); i++) {
+                        if (compra.get(i).equalsIgnoreCase(buscar)) {
+                            if (primera == -1) {
+                                primera = i;
+                            }
+
+                            ultima = i;
+                        }
+                    }
+
+                    if (primera != -1) {
+                        System.out.println("Primera posicion: " + (primera + 1));
+                        System.out.println("Ultima posicion: " + (ultima + 1));
+                        System.out.println("Cantidad del producto: "
+                                + (ultima - primera + 1));
+                    } else {
+                        System.out.println("Producto no encontrado.");
+                    }
+                    break;
             }
 
         } while (opcion != 9);
